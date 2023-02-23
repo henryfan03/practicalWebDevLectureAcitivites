@@ -8,5 +8,9 @@ function filter(array, test) {
     return passed;
 }
 
-console.log(filter(SCRIPTS, script => script.living));
+//console.log(filter(SCRIPTS, script => script.living));
 // → [{name: "Adlam", …}, …]
+
+const words = ['spray','limit','elite','exuberant','destruction','present'];
+
+console.log(filter(words, word => word.length > 6));
