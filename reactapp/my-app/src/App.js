@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {Routes, Route, Link} from "react-router-dom";
 
 function App(props) {
   return (
@@ -9,12 +10,29 @@ function App(props) {
          <h2>It is {new Date().toLocaleTimeString()}.</h2>
           <Routes>
               <Route index element={<Home/>}/>;
-              <Route index element={<About/>}/>;
+              <Route path="about" element={<About/>}/>;
           </Routes>
-
       </div>
     </div>
   );
+}
+
+function Home() {
+    return (
+         <div>
+             <h1>"Home"</h1>
+             <Link to ="/about">About Page</Link>;
+         </div>
+    )
+}
+
+function About() {
+    return (
+            <div>
+                <h1>"About"</h1>
+                <Link to ="/">Back</Link>;
+            </div>
+            )
 }
 
 export default App;
