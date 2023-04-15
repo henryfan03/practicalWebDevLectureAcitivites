@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Routes, Route, Link} from "react-router-dom";
+import {ApiData} from "./apiexample.js";
 
 function App(props) {
   return (
@@ -31,6 +32,7 @@ function About() {
             <div>
                 <h1>"About"</h1>
                 <Link to ="/">Back</Link>;
+                <ApiData/>
             </div>
             )
 }
